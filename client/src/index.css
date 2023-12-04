@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.active {
+    border-bottom: 4px solid #0096f2;
+    color: #0096f2;
+}
+
+.bg-b-200 {
+    background-color: rgba(0, 0, 0, .5);
+}
+
+body {
+    background-color: #f1f5f9;
+    font-family: 'Raleway', sans-serif;
+}
+
+.p-font {
+    font-family: 'Pacifico', cursive;
+}
+
+.signuppage {
+    background-image: url("https://images.unsplash.com/photo-1613476798408-6d9fd924e44c?auto=format&fit=crop&q=80&w=1954&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-position: center;
+    background-color: rgba(0, 0, 0, .5);
+    background-size: cover;
+    background-blend-mode: darken;
+}
+
+
+.profilePicHoverstyle {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+
+.spinerLoadingStyle {
+    background-color: rgba(0, 0, 0, 0.7);
+}
