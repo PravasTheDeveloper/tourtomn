@@ -7,6 +7,7 @@ import { PiShareFatLight } from 'react-icons/pi'
 import ProfilePicture from '../../global/ProfilePicture'
 import { useDispatch, useSelector } from 'react-redux'
 import { likeThePost } from '../../../redux/ReduxSlices/postshowReducer'
+import axios from 'axios'
 
 function PostShowSection({ id, author, createdAt, hashtags, images, likes, profile_pic, shares, title, updatedAt, userName, videos }) {
 
@@ -31,11 +32,16 @@ function PostShowSection({ id, author, createdAt, hashtags, images, likes, profi
         }
     }
 
+    const userPostLike = async(PostId , userId) => {
+        await axios.post("/api/addlike" , {"PostId":PostId ,"userId":userId})
+    }
+
     const UserAuthData = useSelector(state => state.userdata.data._id)
 
     const UpdateForLike = (id, auth) => {
-        console.log(auth)
+        // console.log(auth)
         dispatch(likeThePost({ id, auth }))
+        userPostLike(id,auth)
     }
 
     return (

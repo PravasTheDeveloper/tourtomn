@@ -16,12 +16,10 @@ import AccountSection from './components/accountSection/AccountSection'
 
 
 function App() {
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-
-    const fetchData = async () => {
-
+    const fetchData = async() => {
       await new Promise((resolve) => setTimeout(resolve, 3000));
       setLoading(false);
     };
